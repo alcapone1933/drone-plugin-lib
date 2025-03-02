@@ -13,9 +13,9 @@ import (
 	"net/http"
 	"time"
 
+	"github.com/alcapone1933/drone-plugin-lib/v2/drone"
+	"github.com/alcapone1933/drone-plugin-lib/v2/trace"
 	"github.com/sirupsen/logrus"
-	"github.com/thegeeklab/drone-plugin-lib/v2/drone"
-	"github.com/thegeeklab/drone-plugin-lib/v2/trace"
 	"github.com/urfave/cli/v2"
 )
 

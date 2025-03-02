@@ -1,13 +1,13 @@
 # renovate: datasource=github-releases depName=mvdan/gofumpt
-GOFUMPT_PACKAGE_VERSION := v0.5.0
+GOFUMPT_PACKAGE_VERSION := v0.7.0
 # renovate: datasource=github-releases depName=golangci/golangci-lint
-GOLANGCI_LINT_PACKAGE_VERSION := v1.54.2
+GOLANGCI_LINT_PACKAGE_VERSION := v1.64.5
 
 EXECUTABLE := drone-plugin-lib
 
 DIST := dist
 DIST_DIRS := $(DIST)
-IMPORT := github.com/thegeeklab/$(EXECUTABLE)
+IMPORT := github.com/alcapone1933/$(EXECUTABLE)
 
 GO ?= go
 CWD ?= $(shell pwd)
@@ -19,7 +19,7 @@ GOLANGCI_LINT_PACKAGE ?= github.com/golangci/golangci-lint/cmd/golangci-lint@$(G
 XGO_PACKAGE ?= src.techknowlogick.com/xgo@latest
 
 GENERATE ?=
-XGO_VERSION := go-1.20.x
+XGO_VERSION := go-1.24.x
 XGO_TARGETS ?= linux/amd64,linux/arm64,linux/arm-6,linux/arm-7
 
 TARGETOS ?= linux

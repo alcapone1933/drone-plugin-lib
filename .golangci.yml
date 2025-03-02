@@ -23,9 +23,9 @@ linters:
     - errchkjson
     - errname
     - errorlint
-    - execinquery
+    ## - execinquery
     - exhaustive
-    - exportloopref
+    - copyloopvar # Ersetzt exportloopref
     - forcetypeassert
     - ginkgolinter
     - gocheckcompilerdirectives
@@ -37,12 +37,12 @@ linters:
     - gocyclo
     - godot
     - godox
-    - goerr113
+    - err113 # Ersetzt goerr113
     - gofmt
     - gofumpt
     - goheader
     - goimports
-    - gomnd
+    - mnd # Ersetzt gomnd
     - gomoddirectives
     - gomodguard
     - goprintffuncname
@@ -76,7 +76,7 @@ linters:
     # - structcheck
     - stylecheck
     - tagliatelle
-    - tenv
+    - usetesting # Ersetzt tenv
     - testableexamples
     - thelper
     - tparallel
@@ -87,11 +87,13 @@ linters:
     - whitespace
     - wsl
   fast: false
-
+  # disable:
+    # - execinquery  # Deaktivierter Linter, nicht mehr vorhanden
 run:
   timeout: 3m
+  go: "1.24"  # Hier die Go-Version setzen
 
 linters-settings:
   gofumpt:
     extra-rules: true
-    lang-version: "1.20"
+
